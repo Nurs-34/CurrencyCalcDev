@@ -2,4 +2,5 @@
     <string name="app_name">CurrencyCalc</string>
     <string name="currency_som">SOM</string>
     <string name="input_sum">Введите сумму</string>
+    <string name="refresh_values">Обновить котировки</string>
 </resources>

@@ -31,7 +31,8 @@
                 android:layout_marginStart="8dp"
                 android:background="@drawable/round_outline"
                 android:foregroundGravity="center"
-                android:src="@drawable/ic_flag_kg" />
+                android:src="@drawable/ic_flag_kg"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/text_view_currency_desc"
@@ -70,9 +71,9 @@
                     android:layout_height="52dp"
                     android:gravity="center"
                     android:inputType="numberDecimal"
-                    tools:text="100"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:text="100" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,7 +90,8 @@
         android:src="@drawable/ic_arrows_exchange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_view_first_currency" />
+        app:layout_constraintTop_toBottomOf="@+id/card_view_first_currency"
+        tools:ignore="ContentDescription" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_second_currency"
@@ -114,7 +116,8 @@
                 android:layout_marginStart="8dp"
                 android:background="@drawable/round_outline"
                 android:foregroundGravity="center"
-                android:src="@drawable/ic_flag_kz" />
+                android:src="@drawable/ic_flag_kz"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/text_view_currency_desc_second"
@@ -153,15 +156,14 @@
                     android:layout_height="52dp"
                     android:gravity="center"
                     android:inputType="numberDecimal"
-                    tools:text="100"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:text="100" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
