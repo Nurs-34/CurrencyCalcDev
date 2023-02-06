@@ -5,8 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import kg.currencycalc.R
+import androidx.activity.viewModels
 
 import kg.currencycalc.databinding.ActivitySplashScreenBinding
 
@@ -14,20 +13,19 @@ import kg.currencycalc.databinding.ActivitySplashScreenBinding
 class SplashScreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashScreenBinding
-    private lateinit var viewModel: SplashScreenViewModel
+
+    private val viewModel: SplashScreenViewModel by viewModels()
+
     val apiKey = "&api_key=9306df2651-239eaa439f-rphl2m"
     var firstCurrency = "USD"
     var secondCurrency = "KGS"
     val currencyString = "?from=$firstCurrency&to=EUR,GBP,CNY,RUB,KGS,KZT,USD"
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
-        viewModel = ViewModelProvider(this)[SplashScreenViewModel::class.java]
 
         supportActionBar?.hide()
 
